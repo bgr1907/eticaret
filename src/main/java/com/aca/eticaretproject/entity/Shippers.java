@@ -16,7 +16,7 @@ public class Shippers {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "shipper_id")
-    private int shipperID;
+    private Long shipperID;
 
     @Column(name = "company_name")
     private String companyName;

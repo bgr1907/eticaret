@@ -16,7 +16,7 @@ public class BillingCustomer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
 
     @JoinColumn(name = "customer_id")
     @ManyToOne(optional = true, fetch = FetchType.LAZY)

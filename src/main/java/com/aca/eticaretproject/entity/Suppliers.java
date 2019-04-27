@@ -16,7 +16,7 @@ public class Suppliers {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "supplier_id")
-    private int supplierID;
+    private Long supplierID;
 
     @Column(name = "company_name")
     private String companyName;

@@ -18,7 +18,7 @@ public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "product_id")
-    private int productID;
+    private Long productID;
 
     @JoinColumn(name = "category_id")
     @ManyToOne(optional = true, fetch = FetchType.LAZY)

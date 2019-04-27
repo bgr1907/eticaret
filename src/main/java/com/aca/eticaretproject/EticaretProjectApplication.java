@@ -15,7 +15,7 @@ public class EticaretProjectApplication {
 	}
 	@Bean
 	public ModelMapper getModelMapper(){
-
+        //Deneme
 		ModelMapper modelMapper = new ModelMapper();
 		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 		return modelMapper;

@@ -17,14 +17,14 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "category_id")
-    private int categoryID;
+    private Long categoryID;
 
     @JoinColumn(name = "customer_id")
     @OneToMany(fetch = FetchType.LAZY)
     private List<Products> products;
 
     @Column(name = "parent_id")
-    private int parentID;
+    private Long parentID;
 
     @Column(name = "category_name")
     private String categoryName;

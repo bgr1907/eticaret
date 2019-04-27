@@ -16,7 +16,7 @@ public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
 
     @JoinColumn(name = "supplier_id")
     @ManyToOne(optional = true, fetch = FetchType.LAZY)
