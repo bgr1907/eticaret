@@ -17,7 +17,11 @@ public class OrderDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "order_id")
+    @Column(name = "order_detail_id")
+    private int orderDetailID;
+
+    @JoinColumn(name="order_id")
+    @OneToOne(optional = true, fetch = FetchType.LAZY)
     private Long orderID;
 
     @JoinColumn(name = "product_id")
@@ -47,9 +51,5 @@ public class OrderDetails {
 
     @Column(name = "ship_date")
     private Date shipDate;
-
-    @Column(name = "order_detail_id")
-    private int orderDetailID;
-
 
 }

@@ -1,6 +1,7 @@
 package com.aca.eticaretproject.entity;
 
 import lombok.*;
+import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.*;
 
@@ -39,12 +40,14 @@ public class Customers {
     @Column(name = "postal_code")
     private int postalCode;
 
+    @UniqueElements
     @Column(name = "email")
     private String eMail;
 
     @Column(name = "password")
     private String password;
 
+    @UniqueElements
     @Column(name = "user_name")
     private String userName;
 

@@ -1,7 +1,14 @@
 package com.aca.eticaretproject.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Date;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class OrderDetailsDto {
 
     private Long orderID;
