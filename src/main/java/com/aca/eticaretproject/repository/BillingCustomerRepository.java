@@ -10,9 +10,8 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface BillingCustomerRepository extends JpaRepository<BillingCustomerRepository,Long> {
+public interface BillingCustomerRepository extends JpaRepository<BillingCustomer,Long> {
 
-    BillingCustomer getById(Long id);
-    BillingCustomer getByCustomerId (Customers customerId);
+    BillingCustomer getByBillingId (Long id);
 
 }
