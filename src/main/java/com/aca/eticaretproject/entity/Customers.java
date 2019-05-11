@@ -40,14 +40,12 @@ public class Customers {
     @Column(name = "postal_code")
     private int postalCode;
 
-    @UniqueElements
     @Column(name = "email")
-    private String eMail;
+    private String email;
 
     @Column(name = "password")
     private String password;
 
-    @UniqueElements
     @Column(name = "user_name")
     private String userName;
 

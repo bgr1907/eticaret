@@ -1,8 +1,6 @@
 package com.aca.eticaretproject.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
@@ -25,7 +23,7 @@ public class CustomersDto {
 
     private int postalCode;
 
-    private String eMail;
+    private String email;
 
     private String userName;
 
