@@ -19,7 +19,7 @@ public class Category {
     @Column(name = "category_id")
     private Long categoryID;
 
-    @JoinColumn(name = "customer_id")
+    @JoinColumn(name = "product_id")
     @OneToMany(fetch = FetchType.LAZY)
     private List<Products> products;
 

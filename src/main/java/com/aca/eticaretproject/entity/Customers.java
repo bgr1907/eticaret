@@ -6,7 +6,7 @@ import org.hibernate.validator.constraints.UniqueElements;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "customers")
+@Table(name = "customers", indexes = {@Index(name = "idx_username", columnList = "user_name")})
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

@@ -20,9 +20,10 @@ public class Products {
     @Column(name = "product_id")
     private Long productID;
 
-    @JoinColumn(name = "category_id")
-    @ManyToOne(optional = true, fetch = FetchType.LAZY)
-    private Category categoryID;
+    /*@JoinColumn(name = "category_id")
+    @ManyToOne(optional = true, fetch = FetchType.LAZY)*/
+    @Column
+    private Long categoryID;
 
     @Column(name = "product_name", length = 300)
     private String productName;

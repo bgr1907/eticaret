@@ -1,8 +1,9 @@
 package com.aca.eticaretproject.service;
 
 import com.aca.eticaretproject.dto.CustomersDto;
-import com.aca.eticaretproject.entity.Customers;
-import com.sun.org.apache.bcel.internal.generic.LNEG;
+
+import java.util.List;
+
 
 public interface CustomersService {
 
@@ -13,4 +14,6 @@ public interface CustomersService {
     CustomersDto save(CustomersDto customersDto);
 
     Boolean delete(Long id);
+
+    List<CustomersDto> getAll();
 }

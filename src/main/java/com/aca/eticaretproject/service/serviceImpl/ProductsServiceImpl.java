@@ -7,6 +7,7 @@ import com.aca.eticaretproject.service.ProductsService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 @Service
 public class ProductsServiceImpl implements ProductsService {
@@ -28,7 +29,9 @@ public class ProductsServiceImpl implements ProductsService {
 
     @Override
     public List<ProductsDto> getAllProducts() {
-        return null;
+
+        List<Products> data = productsRepository.findAll();
+        return Arrays.asList(modelMapper.map(data,ProductsDto[].class));
     }
 
     @Override

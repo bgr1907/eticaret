@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class ProductsDto {
     private Long productID;
 
-    private CategoryDto categoryDto;
+    private Long categoryID;
 
     private String productName;
 

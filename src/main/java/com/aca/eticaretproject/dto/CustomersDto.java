@@ -27,4 +27,6 @@ public class CustomersDto {
 
     private String userName;
 
+    private String password;
+
 }

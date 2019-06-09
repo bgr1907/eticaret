@@ -5,6 +5,8 @@ import com.aca.eticaretproject.service.serviceImpl.CustomersServiceImpl;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/customers")
 public class CustomersController {
@@ -19,6 +21,12 @@ public class CustomersController {
     public ResponseEntity<CustomersDto> getById(@PathVariable(value = "id",required = true) Long id){
 
         CustomersDto customersDto = customersServiceImpl.getById(id);
+        return ResponseEntity.ok(customersDto);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<CustomersDto>> getAll(){
+        List<CustomersDto> customersDto = customersServiceImpl.getAll();
         return ResponseEntity.ok(customersDto);
     }
 
