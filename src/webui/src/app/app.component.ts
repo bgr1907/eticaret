@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {AuthenticationService} from "./security/authentication.service";
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,14 @@ export class AppComponent implements OnInit{
 
   activeUser = {};
 
+
+
+  constructor(private authenticationService: AuthenticationService){
+  }
+
+
   ngOnInit(){
     this.activeUser = JSON.parse(localStorage.getItem('currentUser'));
   }
+
 }
