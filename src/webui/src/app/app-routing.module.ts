@@ -6,6 +6,7 @@ import {ProductAddForms1Component} from "./layouts/product/product-add-forms1/pr
 import {ProductAddForms2Component} from "./layouts/product/product-add-forms2/product-add-forms2.component";
 import {LoginComponent} from "./login/login.component";
 import {AuthGuard} from "./security/auth.guard";
+import {RegisterComponent} from "./register/register.component";
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'product-add-2', component: ProductAddForms2Component, canActivate: [AuthGuard]},
   {path: '', redirectTo: 'products', pathMatch: 'full'},
   {path: 'products/category/:categoryID', component: ProductComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({

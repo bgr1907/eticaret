@@ -22,7 +22,7 @@ public class Products {
 
     /*@JoinColumn(name = "category_id")
     @ManyToOne(optional = true, fetch = FetchType.LAZY)*/
-    @Column
+    @Column(name = "category_id")
     private Long categoryID;
 
     @Column(name = "product_name", length = 300)

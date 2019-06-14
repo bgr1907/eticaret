@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +6,9 @@ import { Component,OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  activeUser = {};
+  activeUser:{};
   show:boolean=false;
-  ngOnInit() {
-
+  ngOnInit(){
     this.activeUser= JSON.parse(localStorage.getItem('currentUser'));
     for (var i in this.activeUser){
       if(i==="role"){
@@ -19,5 +18,4 @@ export class AppComponent {
       }
     }
     }
-
 }
