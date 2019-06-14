@@ -34,4 +34,9 @@ public class ProductsController {
     public ResponseEntity<ProductsDto> createProducts(@RequestBody ProductsDto productsDto){
         return ResponseEntity.ok(productsServiceImpl.save(productsDto));
     }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Boolean> deleteProduct(@PathVariable(value = "id",required = true) Long id){
+
+        return ResponseEntity.ok(productsServiceImpl.delete(id));
+    }
 }

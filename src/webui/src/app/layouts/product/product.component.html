@@ -23,6 +23,9 @@
         <h5 class="card-title">{{product.productName}} {{product.price | currency:'USD':true:"1.2-2"}}</h5>
         <p class="card-text">{{product.productDescription}}</p>
         <a (click)="addToCart(product)" class="btn btn-primary">Sepete ekle</a>
+        <div *ngIf="show">
+        <a (click)="deleteToProduct(product.productID)" class="btn btn-danger">Sil</a>
+        </div>
       </div>
     </div>
 

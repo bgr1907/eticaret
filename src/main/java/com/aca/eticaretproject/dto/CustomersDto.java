@@ -13,6 +13,8 @@ public class CustomersDto {
 
     private String lastName;
 
+    private String role;
+
     private String no;
 
     private String building;

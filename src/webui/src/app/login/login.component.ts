@@ -3,6 +3,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {first} from 'rxjs/operators';
 import {AuthenticationService} from "../security/authentication.service";
+import {AppComponent} from "../app.component";
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
               private route: ActivatedRoute,
               private router: Router,
-              private authenticationService: AuthenticationService) {
+              private authenticationService: AuthenticationService,
+              private appComponent:AppComponent) {
   }
 
   ngOnInit() {
@@ -53,9 +55,12 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
+          console.log("hatasız");
           this.router.navigate([this.returnUrl]);
+          this.appComponent.ngOnInit();
         },
         error => {
+          console.log("hata");
           this.error = error;
           this.loading = false;
         });

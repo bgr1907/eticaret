@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Product} from "../layouts/product/product";
-import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse, HttpHeaders, HttpParams} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
 import {catchError, tap} from "rxjs/operators";
 
@@ -21,6 +21,12 @@ export class ProductService {
       tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)
     );
+  }
+  deleteProduct(productID,params: HttpParams = new HttpParams()){
+    let newPath = this.path+'/'+productID;
+    console.log(newPath);
+    return this.http.delete(newPath,{params}).subscribe(()=>
+    console.log("denemee"));
   }
 
   addProduct(product: Product): Observable<Product>{

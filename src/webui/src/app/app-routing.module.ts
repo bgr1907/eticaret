@@ -11,7 +11,7 @@ import {AuthGuard} from "./security/auth.guard";
 const routes: Routes = [
   {path: 'index', component: IndexComponent},
   {path: 'products', component: ProductComponent},
-  {path: 'product-add-1', component: ProductAddForms1Component, canActivate: [AuthGuard]},
+  {path: 'product-add-1', component: ProductAddForms1Component},
   {path: 'product-add-2', component: ProductAddForms2Component, canActivate: [AuthGuard]},
   {path: '', redirectTo: 'products', pathMatch: 'full'},
   {path: 'products/category/:categoryID', component: ProductComponent},

@@ -49,6 +49,11 @@ public class ProductsServiceImpl implements ProductsService {
 
     @Override
     public Boolean delete(Long id) {
-        return null;
+        try {
+            productsRepository.deleteById(id);
+            return true;
+        }catch (Exception e) {
+            return false;
+        }
     }
 }

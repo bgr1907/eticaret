@@ -49,5 +49,6 @@ public class Customers {
     @Column(name = "user_name")
     private String userName;
 
-
+    @Column(name = "user_role")
+    private String role;
 }
