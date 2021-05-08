@@ -36,7 +36,7 @@
     "html2canvas": "^1.0.0-alpha.12",
     "jquery": "^3.4.1",
     "jspdf": "^1.4.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "moment": "^2.22.2",
     "ngx-bootstrap": "^4.2.0",
     "ngx-content-loading": "^0.1.3",
