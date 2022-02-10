@@ -42,7 +42,7 @@
     "ngx-content-loading": "^0.1.3",
     "ngx-owl-carousel": "^2.0.7",
     "ngx-pagination": "^3.2.1",
-    "node-sass": "^4.10.0",
+    "node-sass": "^7.0.0",
     "owl.carousel": "^2.3.4",
     "popper": "^1.0.1",
     "popper.js": "^1.15.0",
